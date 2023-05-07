@@ -70,6 +70,9 @@ main aside {
   position: fixed;
   padding-top: 1rem;
   width: 11rem;
+  margin-top: 0;
+  overflow-y: scroll;
+  padding-bottom: 8rem;
 }
 
 main main-content {
@@ -136,7 +139,14 @@ main-content .active {
 main-content section {
   margin-top: 1.2rem;
 }
-
+#asideFilter{
+  background-color: black;
+  border: 1px solid whitesmoke;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
 main-content section title {
   display: block;
   font-size: 1.5rem;
@@ -145,7 +155,7 @@ main-content section title {
 main-content .items {
   display: flex;
   width: auto;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 1rem 0;
   gap: 1rem;
 }
@@ -153,10 +163,14 @@ main-content .items {
 main-content .items .item {
   border: 1px solid black;
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main-content .items .item img {
   max-width: 100%;
+  min-width: 100%;
 }
 
 main-content .items .item .row {
