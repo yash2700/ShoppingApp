@@ -38,7 +38,7 @@ document.getElementById("login").addEventListener("click",(e)=>{
         }
         document.getElementsByTagName("form")[0].reset();
         if(isCorrect){
-            window.location.href="profile/profile.html"
+            window.location.href="ShoppingApp/profile/profile.html"
         }
     }
 })
