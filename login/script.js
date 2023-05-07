@@ -44,23 +44,23 @@ document.getElementById("login").addEventListener("click",(e)=>{
 })
 
 document.getElementById("Home").addEventListener("click",(e)=>{
-    window.location.href="../../index.html"
+    window.location.href="/ShoppingApp/index.html"
 })
 document.getElementById("Login").addEventListener("click",(e)=>{
-    window.location.href="../../login/login.html"
+    window.location.href="/ShoppingApp/login/login.html"
 })
 
 document.getElementById("SignUp").addEventListener("click",(e)=>{
     if(!isLoggedIn)
-    window.location.href="../../signup/signup.html"
+    window.location.href="/ShoppingApp/signup/signup.html"
     else{
         alert("already signed in !")
-    window.location.href="../../profile/profile.html";
+    window.location.href="/ShoppingApp/profile/profile.html";
     }
 })
 document.getElementById("MyCart").addEventListener("click",(e)=>{
     if(!isLoggedIn)
-    window.location.href="../../login/login.html"
+    window.location.href="/ShoppingApp/login/login.html"
     else
-    window.location.href="../../cart/cart.html"
+    window.location.href="/ShoppingApp/cart/cart.html"
 })
