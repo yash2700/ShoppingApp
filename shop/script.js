@@ -163,33 +163,35 @@ function addToCart(item){
   if(JSON.parse(localStorage.getItem("carts"))!=null){
     var currUser=localStorage.getItem("currUser");
     currUser=JSON.parse(currUser);
+    console.log(currUser);
     var carts=JSON.parse(localStorage.getItem("carts"));
     var isCart=false;
-     carts.forEach((i)=>{
+    carts.forEach((i)=>{
       if(i.email===currUser.email){
         isCart=true;
       }
     })
+    console.log(isCart);
     if(isCart){
-       carts.forEach((i)=>{
-      if(i.email===currUser.email){
-        i.items.push(item);
-      }
-    })
+      carts.forEach((i)=>{
+        if(i.email===currUser.email){
+          i.items.push(item)
+        }
+      })
     }
     else{
-       var cart={
-      email:currUser.email,
-      items:[]
-    }
-      cart.items.push(item)
-    carts.forEach((i)=>{
-      if(i.email===currUser.email){
-        i.items.push(item);
+      var cart={
+        email:currUser.email,
+        items:[]
       }
-    })
-      carts.push(cart);
+      carts.push(cart)
+      carts.forEach((i)=>{
+        if(i.email===currUser.email){
+          i.items.push(item)
+        }
+      })
     }
+    
     localStorage.setItem("carts",JSON.stringify(carts))
     console.log((carts));
   }else{
@@ -203,9 +205,8 @@ function addToCart(item){
     cart.items.push(item)
     arr.push(cart);
     localStorage.setItem("carts",JSON.stringify(arr));
-    console.log(arr);
   }
-  alert("ittem added successfully !")
+  alert("item added successfully !")
 }
 
 
