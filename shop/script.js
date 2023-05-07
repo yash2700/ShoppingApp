@@ -14,7 +14,7 @@ window.onload=function(){
     isLoggedIn=true;
   }
   else{
-    window.location.href="../../login/login.html"
+        window.location.href='ShoppingApp/login/login.html';
   }
 }
 var dataFetched=[];
