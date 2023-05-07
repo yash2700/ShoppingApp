@@ -68,9 +68,9 @@ document.getElementById("change").addEventListener("click",(e)=>{
 document.getElementById("logout").addEventListener("click",(e)=>{
     e.preventDefault();
     localStorage.setItem("currUser",null);
-    window.location.href="ShoppingApp/index.html";
+    window.location.href="/ShoppingApp/index.html";
 })
 
 document.getElementById("cart").addEventListener("click",(e)=>{
-    window.location.href="ShoppingApp/cart/cart.html"
+    window.location.href="/ShoppingApp/cart/cart.html"
 })
