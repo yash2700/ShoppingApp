@@ -164,11 +164,32 @@ function addToCart(item){
     var currUser=localStorage.getItem("currUser");
     currUser=JSON.parse(currUser);
     var carts=JSON.parse(localStorage.getItem("carts"));
-    carts.forEach((i)=>{
+    var isCart=false;
+     carts.forEach((i)=>{
       if(i.email===currUser.email){
-        i.items.push(item)
+        isCart=true;
       }
     })
+    if(isCart){
+       carts.forEach((i)=>{
+      if(i.email===currUser.email){
+        i.items.push(item);
+      }
+    })
+    }
+    else{
+       var cart={
+      email:currUser.email,
+      items:[]
+    }
+      cart.items.push(item)
+    carts.forEach((i)=>{
+      if(i.email===currUser.email){
+        i.items.push(item);
+      }
+    })
+      carts.push(cart);
+    }
     localStorage.setItem("carts",JSON.stringify(carts))
     console.log((carts));
   }else{
