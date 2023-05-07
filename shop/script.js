@@ -182,6 +182,7 @@ function addToCart(item){
     cart.items.push(item)
     arr.push(cart);
     localStorage.setItem("carts",JSON.stringify(arr));
+    console.log(arr);
   }
   alert("ittem added successfully !")
 }
