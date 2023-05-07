@@ -16,7 +16,7 @@ window.onload=function(){
          lname.value=user.lname;
     }
     else{
-        window.location.href='../../login/login.html';
+        window.location.href='ShoppingApp/login/login.html';
     }
 }
 
